@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { faker } from '@faker-js/faker';
 import { MainPage, RegisterPage } from '../src/pages/index';
-import { UserBuilder } from '../src/builders/index';
+import { UserBuilder } from '../src/helpers/builders/index';
 
 const URL = 'https://realworld.qa.guru/';
 

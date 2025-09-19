@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { App } from '../src/pagesFacade/app.page';
-import { UserBuilder } from '../src/builders/index';
+import { UserBuilder } from '../src/helpers/builders/index';
 
 const URL = 'https://realworld.qa.guru/';
 
@@ -8,7 +8,7 @@ test.describe('Регистрация', () => {
 	test.beforeEach(async ({ page }) => {
 		await page.goto(URL);
 	});
-	test.only('Пользователь не может зарегистрироваться повторно Facade', async ({
+	test('Пользователь не может зарегистрироваться повторно Facade', async ({
 		page,
 	}) => {
 		const user = new UserBuilder()

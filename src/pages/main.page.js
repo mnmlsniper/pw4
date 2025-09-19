@@ -1,3 +1,4 @@
+
 export class MainPage {
 	constructor(page) {
 		// техническое описание страницы
@@ -8,4 +9,6 @@ export class MainPage {
 	async gotoRegister() {
 		await this.signupLink.click();
 	}
+
+	//todo
 }
