@@ -8,7 +8,7 @@ test.describe('Регистрация', () => {
 	//test.beforeEach(async ({ page }) => {
 	//		await page.goto(URL);
 	//	});
-	test.only('Пользователь не может зарегистрироваться повторно fixture', async ({
+	test('Пользователь не может зарегистрироваться повторно fixture', async ({
 		app,
 	}) => {
 		const user = new UserBuilder()
@@ -16,7 +16,7 @@ test.describe('Регистрация', () => {
 			.addName()
 			.addPassword()
 			.generate();
-	//	await app.main.open();
+		//	await app.main.open();
 		await app.main.gotoRegister();
 		await app.register.register(user);
 		//	await app.globalfeed.register();
