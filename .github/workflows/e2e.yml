@@ -24,10 +24,12 @@ jobs:
         run: npm t
       - name: Запускаем генерацию allure в одном файле
         run: npm run allureFile
+        if: always()
+        continue-on-error: true
       # сохраняем результаты
-
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
+        continue-on-error: true
         with:
           name: allure-report
           path: allure-report
