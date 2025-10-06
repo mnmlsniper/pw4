@@ -2,7 +2,7 @@ import { expect } from "@playwright/test";
 import { test } from "../src/helpers/fixtures/index";
 
 let token;
-test.describe.only("Challenge", () => {
+test.describe("Challenge", () => {
   test.beforeAll(async ({ api }, testinfo) => {
     let r = await api.challenger.post(testinfo);
     const headers = r.headers();
@@ -10,7 +10,7 @@ test.describe.only("Challenge", () => {
     token = headers["x-challenger"];
   });
   test("получить токен", async ({ api }, testinfo) => {
-    console.log(testinfo.project);
+    console.log(`${testinfo}`);
     let body = await api.challenges.get(token, testinfo);
     expect(body.challenges.length).toBe(59);
   });
