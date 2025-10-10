@@ -13,10 +13,11 @@ pipeline {
    stage('Allure') {
       steps {
    allure(
-      [   
-         reportBuildPolicy: 'ALWAYS'
-         results:[[path: 'allure-results']]
-      ]
+          includeProperties: false,
+            jdk: '',
+            properties: [],
+            reportBuildPolicy: 'ALWAYS',
+            results: [[path: 'allure-report']]
    )       
       }
      }   
