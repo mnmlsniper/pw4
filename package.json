@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test env.spec.js",
+    "test": "npx playwright test",
     "testUI": "npx playwright test --ui",
     "report": "npx playwright show-report",
     "allureFile": "npx allure awesome ./allure-results --single-file"
